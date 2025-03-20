@@ -1,0 +1,45 @@
+<div class="calculator-container">
+    <div class="calculator">
+      <h1>Calculadora</h1>
+  
+      <label for="v1">Valor 1</label>
+      <input
+        id="v1"
+        type="number"
+        placeholder="Ingrese el primer valor"
+        [value]="v1 !== 0 ? v1 : ''"
+        (input)="actualizarV1($event)"
+      />
+  
+      <label for="v2">Valor 2</label>
+      <input
+        id="v2"
+        type="number"
+        placeholder="Ingrese el segundo valor"
+        [value]="v2 !== 0 ? v2 : ''"
+        (input)="actualizarV2($event)"
+      />
+
+      <div>
+        <label for="v2">Resultado</label>
+        <input
+        id="resultado"
+        type="text"
+        class="form-control"
+        [value]="resultado !== 0 ? resultado : ''"
+        readonly
+      />
+      </div>
+
+      <app-calculadora-hijo 
+        [v1]="v1" 
+        [v2]="v2" 
+        (resultado)="actualizarResultado($event)">
+      </app-calculadora-hijo>
+
+    </div>
+  </div>
+  
+  
+  
+  
