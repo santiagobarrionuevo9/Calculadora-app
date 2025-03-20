@@ -17,7 +17,7 @@ La aplicación cuenta con un componente hijo encargado de realizar las operacion
 
 - Angular
 - TypeScript
-- Bootstrap (opcional)
+- Bootstrap 
 
 
 
